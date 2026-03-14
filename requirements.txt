@@ -1,0 +1,4 @@
+openai>=1.0.0      # OpenRouter uses OpenAI-compatible API
+rich>=13.0.0       # Terminal UI
+pyyaml>=6.0        # Config parsing
+pytest>=7.0.0      # Tests

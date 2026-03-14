@@ -1,0 +1,26 @@
+# Hermes Skill Forge — Atropos Training Config
+environment:
+  name: skill-forge
+  class: environments.skill_forge_env.SkillForgeEnv
+
+training:
+  workers: 4
+  batch_size: 16
+  max_turns_per_episode: 25
+  temperature: 0.7
+
+model:
+  name: openrouter/nousresearch/hermes-3-llama-3.1-405b
+  max_tokens: 2000
+
+reward_weights:
+  skill_written: 0.30
+  tests_executed: 0.25
+  quality_score: 0.20
+  published: 0.10
+  searched_first: 0.10
+  documentation: 0.05
+
+logging:
+  wandb_project: hermes-skill-forge
+  log_every_n_steps: 10
